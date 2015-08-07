@@ -2,8 +2,15 @@
 
   
 <!--   TODO: Loop through myBooks and display each one with this HTML -->
-<!-- MyBooks is called from the $scope.MyBooks in the BookshelfController.js file -->
+<!-- MyBooks is called from the $scope.MyBooks in the BookshelfController.js file 
+MyBooks serves as the JSON data being received from the API-->
   <div class="book col-md-3" ng-repeat="book in MyBooks">
+  <!-- ng-repeat is used to repeat each book -->
+  <!-- REMEMBER MyBooks is defined in the BookshelfController and book in MyBooks is the alias -->
+
+  <!-- this creates a URL for each book and $index gives the index of a book
+  in the MyBooks array, meaning the URL of the first book is #/books/0 and 
+  the second is #/books/1 and so forth -->
     <a href="#/books/{{$index}}">
       <!-- TODO: Add the book's cover here -->
       <img src="{{ book.cover }}">
