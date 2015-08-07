@@ -1,12 +1,13 @@
 <!doctype html>
 <html>
+  <title>Reader</title>
   <head>
       <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300,900' rel='stylesheet' type='text/css'>
     <link href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
     <script src="js/node_modules/angular/angular.min.js"></script>
     <!-- Angular Routing -->
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-route.js"></script>
+    <script src="js/node_modules/angular-route/angular-route.min.js"></script>
     
 
   </head>
@@ -20,7 +21,10 @@
     <div class="main">
       <div class="container">
 
-        
+      <!-- ng-view is called here to display different view templates from the different controllers -->
+      <div ng-view></div>
+
+      
 
       </div>
     </div>
@@ -34,7 +38,7 @@
     <script src="js/controllers/ChapterController.js"></script>
 
     <!-- Services -->
-    
+    <script src="js/services/books.js"></script>
 
   </body>
 </html>

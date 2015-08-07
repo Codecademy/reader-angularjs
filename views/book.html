@@ -2,9 +2,10 @@
 
 <div class="book-detail">
   <!-- TODO: Add the book's cover here -->
-  <h3 class="title">  </h3>
-  <p class="author">  </p>
-  <p class="description">  </p>
+  <img src="{{book.cover}}">
+  <h3 class="title">{{book.title}}</h3>
+  <p class="author">{{book.author}}</p>
+  <p class="description">{{book.description}}</p>
 
   <a class="button" href="#/books/{{ currentBookIndex }}/chapters/0">Read</a>
 </div>

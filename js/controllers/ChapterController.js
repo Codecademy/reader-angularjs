@@ -1,7 +1,8 @@
 app.controller('ChapterController', ['$scope', 'books', '$routeParams', function($scope, books, $routeParams) {
   books.success(function(data) {
     // Your code here
-
+    $scope.book = data[$routeParams.bookId];
+    $scope.chapter = $scope.book.chapters[$routeParams.chapterId];
 
 
     // If there no more chapters left, go back to the bookshelf view
