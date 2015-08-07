@@ -1,7 +1,11 @@
 app.controller('ChapterController', ['$scope', 'books', '$routeParams', function($scope, books, $routeParams) {
   books.success(function(data) {
-    // Your code here
-
+    // uses books service to load a single chapter into $scope.chapter
+    // see API JSON data for chapters
+    $scope.book = data[$routeParams.bookId];
+    // access array of chapters inside $scope.book and get a specific chapter using
+    // $routeParams.chapterId, stores the specifc chapter into $scope.chapter
+    $scope.chapter = $scope.book.chapters[$routeParams.chapterId];
 
 
     // If there no more chapters left, go back to the bookshelf view
